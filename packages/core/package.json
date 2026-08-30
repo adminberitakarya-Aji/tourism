@@ -1,0 +1,15 @@
+{
+  "name": "@tourism/core",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Tourism Platform core — business logic murni & skema kanonik, framework-agnostic (tanpa import Next.js/React/NestJS)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  }
+}

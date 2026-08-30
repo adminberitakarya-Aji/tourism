@@ -10,6 +10,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@tourism/core':
+        specifier: workspace:*
+        version: link:../../packages/core
       next:
         specifier: 16.3.3
         version: 16.3.3(@babel/core@7.29.7)(@types/node@20.19.43)(react-dom@19.2.8(react@19.2.8))(react@19.2.8)
@@ -45,6 +48,12 @@ importers:
         specifier: ^5
         version: 5.9.3
 
+  packages/core:
+    devDependencies:
+      typescript:
+        specifier: ^5
+        version: 5.9.3
+
   services/api:
     dependencies:
       '@nestjs/common':
@@ -56,6 +65,9 @@ importers:
       '@nestjs/platform-express':
         specifier: ^11.0.0
         version: 11.2.3(@nestjs/common@11.2.3(reflect-metadata@0.2.2)(rxjs@7.8.2))(@nestjs/core@11.2.3)
+      '@tourism/core':
+        specifier: workspace:*
+        version: link:../../packages/core
       reflect-metadata:
         specifier: ^0.2.2
         version: 0.2.2
