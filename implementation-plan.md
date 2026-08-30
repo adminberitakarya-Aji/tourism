@@ -16,7 +16,7 @@ Legend status: `Not Started` / `In Progress` / `Done`
 | 0.2 | Scaffold `apps/web` | Next.js + TypeScript init, jalan di `pnpm dev`, halaman default render | 0.1 | Done ✅ 30/08/2026 |
 | 0.3 | Scaffold `services/api` | NestJS + TypeScript init, jalan di `pnpm start:dev`, endpoint health-check (`GET /health`) return 200 | 0.1 | Done ✅ 30/08/2026 |
 | 0.4 | Scaffold `packages/core` | Package kosong dengan `index.ts`, ter-resolve sebagai dependency dari `apps/web` & `services/api` via workspace | 0.1 | Done ✅ 30/08/2026 |
-| 0.5 | Scaffold `packages/api-client` | Package kosong dengan `index.ts`, ter-resolve sebagai dependency dari `apps/web` | 0.1 | Not Started |
+| 0.5 | Scaffold `packages/api-client` | Package kosong dengan `index.ts`, ter-resolve sebagai dependency dari `apps/web` | 0.1 | Done ✅ 30/08/2026 |
 | 0.6 | Definisi skema kanonik per entity | TypeScript types + validation schema (`zod` atau `class-validator` DTO) untuk `Destination`, `Business`, `UMKM`, `Event`, `Route` di `packages/core` | 0.4 | Not Started |
 | 0.7 | Field trust metadata | Tiap entity punya field `source`, `trust_score`, `freshness_timestamp` per field (bukan cuma per record) — didokumentasikan + di-type | 0.6 | Not Started |
 | 0.8 | Entity resolution key spec | Dokumen (bisa markdown di `packages/core/docs/`): kombinasi field per entity type buat deteksi duplikat (nama+lokasi+kategori) | 0.6 | Not Started |

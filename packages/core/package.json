@@ -5,6 +5,9 @@
   "description": "Tourism Platform core — business logic murni & skema kanonik, framework-agnostic (tanpa import Next.js/React/NestJS)",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
+  "dependencies": {
+    "zod": "^4.0.0"
+  },
   "scripts": {
     "build": "tsc",
     "typecheck": "tsc --noEmit"

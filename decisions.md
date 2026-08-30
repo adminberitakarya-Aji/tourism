@@ -75,6 +75,24 @@ Status keputusan: **Disepakati** (semua entri di dokumen ini sudah dikonfirmasi 
 
 ---
 
+## D5 — Validation Library: Zod untuk skema kanonik di `packages/core`
+
+**Keputusan:** Skema kanonik entity (task 0.6) memakai **Zod** — satu definisi skema menghasilkan TypeScript type (inference) + validator runtime.
+
+**Konteks:** Skema kanonik dipakai lintas layer (`core` sebagai source of truth, `web` untuk validasi form, `api` untuk validasi payload). implementation-plan 0.6 semula menyebut "zod atau class-validator".
+
+**Alternatif yang ditolak:**
+- *class-validator* — natif NestJS tapi class-based, tidak menghasilkan type otomatis, verbose di sisi frontend.
+- *Tanpa library (validator manual)* — nol dependency tapi validasi ditulis tangan dua kali, rawan drift dengan type.
+
+**Konsekuensi:**
+- Dependency baru di `packages/core` (disetujui user, 30/08/2026).
+- DTO NestJS (task 1.4 dst.) tetap wajib sesuai `agents.md` — DTO bisa dibungkus dari schema Zod via `zod-to-json-schema`/pipe adapter, atau DTO class yang memvalidasi dengan skema; diputuskan saat implementasi task terkait.
+- Type entity dilarang didefinisikan manual terpisah dari skema — type harus hasil `z.infer` agar tidak drift.
+
+---
+
 ## Status keputusan yang masih terbuka
 
 Tidak ada — semua keputusan pra-Fase 0 yang menggantung sudah diresolusikan di dokumen ini.
+
