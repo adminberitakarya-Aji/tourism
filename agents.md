@@ -10,6 +10,9 @@ Dokumen ini adalah aturan main untuk AI coding agent (termasuk Claude) yang beke
 - `prd.md` — scope produk, apa yang masuk/tidak masuk MVP
 - `implementation-plan.md` — task list & status per fase
 - `decisions.md` — keputusan teknis yang sudah disepakati (ORM, geospatial, auth, LLM provider) — JANGAN dibatalkan atau diubah tanpa konfirmasi user
+- `docs/ui-ux-master-blueprint.md` — spesifikasi UI/UX master untuk `apps/web` (mobile-first, web → PWA → Native). **Wajib dibaca sebelum pekerjaan UI/Fase 5 ke atas** — desain visual, alur halaman, dan komponen mengikuti dokumen ini, bukan dikarang sendiri
+
+> Catatan lokasi: dokumen-dokumen di atas kini berada di folder `docs/` (kecuali `agents.md` ini yang tetap di root).
 
 Kalau ada instruksi yang bertentangan dengan salah satu dokumen ini, **berhenti dan konfirmasi ke user dulu** — jangan asumsikan dokumen mana yang lebih benar.
 
