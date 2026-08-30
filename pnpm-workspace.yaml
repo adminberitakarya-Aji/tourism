@@ -2,3 +2,9 @@ packages:
   - "apps/*"
   - "packages/*"
   - "services/*"
+
+# Dependency dengan postinstall build script yang di-skip pnpm 10 (generate dari create-next-app)
+ignoredBuiltDependencies:
+  - sharp
+  - unrs-resolver
+
