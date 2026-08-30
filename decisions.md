@@ -92,6 +92,19 @@ Status keputusan: **Disepakati** (semua entri di dokumen ini sudah dikonfirmasi 
 
 ---
 
+## D6 — Field Trust Metadata: pendekatan sidecar (bukan wrapper nilai)
+
+**Keputusan:** Trust metadata per-field (task 0.7) disimpan sebagai **map terpisah** `fieldTrust: Record<fieldName, { source, trustScore, freshnessTimestamp }>` di sisi entity — nilai field tetap flat.
+
+**Alternatif yang ditolak:**
+- *Wrapper nilai* (`{ value, source, trustScore, freshnessTimestamp }` per field) — memaksa semua konsumen membaca `.value`, menyulitkan mapping Prisma (Fase 3), dan merge logic (2.2) jadi rumit.
+
+**Kontrak utama:** record-level `source` tetap ada (pengirim record); `fieldTrust[field].source` meng-override per field; `fieldTrust` boleh kosong saat ingestion, **wajib lengkap** untuk `TRUST_REQUIRED_FIELDS` setelah merge (Fase 2.2); default trustScore per sumber: government 1.0 / business_self_reg 0.7 / traveler 0.5 (di-tune di Fase 6.1).
+
+**Dokumentasi:** `packages/core/docs/trust-metadata.md`.
+
+---
+
 ## Status keputusan yang masih terbuka
 
 Tidak ada — semua keputusan pra-Fase 0 yang menggantung sudah diresolusikan di dokumen ini.
