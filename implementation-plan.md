@@ -18,8 +18,8 @@ Legend status: `Not Started` / `In Progress` / `Done`
 | 0.4 | Scaffold `packages/core` | Package kosong dengan `index.ts`, ter-resolve sebagai dependency dari `apps/web` & `services/api` via workspace | 0.1 | Done ✅ 30/08/2026 |
 | 0.5 | Scaffold `packages/api-client` | Package kosong dengan `index.ts`, ter-resolve sebagai dependency dari `apps/web` | 0.1 | Done ✅ 30/08/2026 |
 | 0.6 | Definisi skema kanonik per entity | TypeScript types + validation schema (`zod` atau `class-validator` DTO) untuk `Destination`, `Business`, `UMKM`, `Event`, `Route` di `packages/core` | 0.4 | Done ✅ 30/08/2026 |
-| 0.7 | Field trust metadata | Tiap entity punya field `source`, `trust_score`, `freshness_timestamp` per field (bukan cuma per record) — didokumentasikan + di-type | 0.6 | Not Started |
-| 0.8 | Entity resolution key spec | Dokumen (bisa markdown di `packages/core/docs/`): kombinasi field per entity type buat deteksi duplikat (nama+lokasi+kategori) | 0.6 | Not Started |
+| 0.7 | Field trust metadata | Tiap entity punya field `source`, `trust_score`, `freshness_timestamp` per field (bukan cuma per record) — didokumentasikan + di-type | 0.6 | Done ✅ 30/08/2026 |
+| 0.8 | Entity resolution key spec | Dokumen (bisa markdown di `packages/core/docs/`): kombinasi field per entity type buat deteksi duplikat (nama+lokasi+kategori) | 0.6 | Done ✅ 30/08/2026 |
 | 0.9 | Field write-authority matrix | Dokumen: field mana boleh ditulis/di-override oleh sumber mana (Government/Business/Traveler), prioritas saat konflik | 0.6 | Not Started |
 | 0.10 | End-to-end wiring test | Satu fungsi dummy di `packages/core` (mis. `ping()`) dipanggil dari `apps/web` lewat `packages/api-client` → `services/api` → return sukses. Ini bukti alur nyambung sebelum diisi logic asli | 0.2, 0.3, 0.4, 0.5 | Not Started |
 
