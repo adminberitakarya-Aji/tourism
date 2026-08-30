@@ -1,0 +1,15 @@
+{
+  "name": "tourism-platform",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Tourism Platform monorepo — AI trip planner dari data resmi daerah (fase pilot 1 kota)",
+  "packageManager": "pnpm@10.34.5",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "pnpm -r build",
+    "typecheck": "pnpm -r typecheck",
+    "lint": "pnpm -r lint"
+  }
+}
