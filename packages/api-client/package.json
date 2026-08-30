@@ -1,0 +1,15 @@
+{
+  "name": "@tourism/api-client",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Tourism Platform API client — satu-satunya lapisan pemanggilan API dari sisi client (dipakai web sekarang, mobile nanti)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "typescript": "^5"
+  }
+}

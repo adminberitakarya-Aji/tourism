@@ -10,6 +10,9 @@ importers:
 
   apps/web:
     dependencies:
+      '@tourism/api-client':
+        specifier: workspace:*
+        version: link:../../packages/api-client
       '@tourism/core':
         specifier: workspace:*
         version: link:../../packages/core
@@ -44,6 +47,12 @@ importers:
       tailwindcss:
         specifier: ^4
         version: 4.3.3
+      typescript:
+        specifier: ^5
+        version: 5.9.3
+
+  packages/api-client:
+    devDependencies:
       typescript:
         specifier: ^5
         version: 5.9.3
